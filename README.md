@@ -1,50 +1,82 @@
-# Welcome to your Expo app 👋
+# TriathlonForge (Frontend)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Forge Your Best Performance – Track, Analyze, Improve.**
 
-## Get started
+TriathlonForge je aplikacija za trkače i triatlonce koja omogućava praćenje i analizu fizičkih aktivnosti koristeći podatke sa **STRAVA** ili **Garmin** profila. Cilj je unapređenje treninga kroz detaljne analize i personalizovane preporuke.  
 
-1. Install dependencies
+TriathlonForge se fokusira na ono što je najvažnije – **praćenje performansi bez nepotrebne komplikacije.**
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 📌 Svrha aplikacije
+- Centralizovano praćenje i analiza treninga.  
+- Personalizovani izveštaji i preporuke.  
+- Pregled napretka kroz grafikone i statistike.  
+- Planiranje i motivacija kroz kalendar i notifikacije.  
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 👥 Kome je aplikacija namenjena
+- Trkačima (rekreativnim i profesionalnim).  
+- Triatloncima koji žele detaljan pregled treninga.  
+- Sportistima koji žele predloge za poboljšanje i recovery.  
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📝 Kako funkcioniše aplikacija
+1. **Unos podataka** – korisnik se registruje i povezuje Strava ili Garmin nalog (link ka profilu).  
+2. **Login** – proverava se preko API-ja da li se kredencijali poklapaju sa Strava/Garmin bazom.  
+3. **Pregled aktivnosti** – prikazuje se lista aktivnosti korisnika sa podacima:  
+   - distanca,  
+   - prosečan pace,  
+   - vreme trajanja aktivnosti,  
+   - potrošene kalorije,  
+   - prosečni otkucaji srca.  
+4. **Obrada podataka** – aplikacija kreira mesečne i godišnje izveštaje, grafikone i preporuke.  
+5. **Rezultati obrade** – pregled napretka, AI predlozi treninga (druga faza), notifikacije i deljenje na društvenim mrežama.  
+6. **Privatnost** – podaci se koriste isključivo za potrebe aplikacije, mogu se deliti samo ako korisnik želi.  
+7. **Profili korisnika** – svaki korisnik ima svoj profil sa osnovnim podacima i analizama aktivnosti.  
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🚀 Funkcionalnosti – Faza 1
+1. **Login / Register**  
+2. **Home Page** – prikaz aktivnosti korisnika (tekstualno iz API-ja).  
+3. **Calculators Page** – pace & BMI kalkulator (na istoj stranici).  
+   - `time = pace × distance`  
+   - `distance = time / pace`  
+   - `pace = time / distance`  
+   - `speed = distance / time`  
+4. **Profile Page** – ime, prezime, godište, prosečan HR tokom aktivnosti, broj aktivnosti + grafikoni (pace, speed, puls).  
+5. **Calendar Page** – unos i pregled aktivnosti sa tipom aktivnosti + notifikacija dan pre treninga.  
+6. **Chat Page** – komunikacija između korisnika.  
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 📊 Izveštaji i analize
+- **Mesečni izveštaji** – pređena distanca, napredak (brži/sporiji), varijacije pulsa, pace-a, kadence.  
+- **Godišnji izveštaji** – pregled ukupnog napretka.  
+- **Predlozi aktivnosti** – recovery, novi treninzi.  
+- **Grafikoni** – koriste se spline chart za vizuelizaciju.  
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🔔 Dodatne funkcionalnosti
+- Dodavanje plana treninga sa notifikacijama.  
+- Deljenje aktivnosti na društvenim mrežama.  
+- Automatsko povezivanje aktivnosti sa kalendarom.  
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 🤖 Funkcionalnosti – Faza 2
+- **Progress prediction** – prognoza gde će korisnik biti za 3 meseca ako nastavi istim tempom.  
+- **AI preporuke treninga** – personalizovane preporuke na osnovu dosadašnjih aktivnosti.  
+- **Automatsko povezivanje aktivnosti i kalendara.**  
+- **Recap godine** – krajem decembra rezime svih aktivnosti korisnika.  
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 🛠️ Tehnologije
+- **Frontend**: React Native  
+- **Backend/API**: Python (Flask)  
+- **Integracije**: Strava API
