@@ -9,7 +9,7 @@ const StravaWebViewScreen = () => {
     <View style={styles.container}>
       <WebView
         ref={webviewRef}
-        source={{ uri: "https://15e8e85bd6ff.ngrok-free.app/api/strava/auth" }}
+        source={{ uri: "https://51b1b8bea150.ngrok-free.app/api/strava/auth" }}
         onNavigationStateChange={(navState) => {
           if (navState.url.startsWith("callback://home")) {
             const urlParams = new URLSearchParams(navState.url.split("?")[1]);

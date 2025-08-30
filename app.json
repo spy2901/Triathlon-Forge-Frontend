@@ -9,7 +9,11 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "icon":{
+        "dark": "./assets/images/icon-dark.png",
+        "light": "./assets/images/icon.png"
+      }
     },
     "android": {
       "adaptiveIcon": {

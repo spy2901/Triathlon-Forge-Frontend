@@ -79,7 +79,7 @@ const RegisterDesign = () => {
     }
     try {
       const response = await fetch(
-        "https://15e8e85bd6ff.ngrok-free.app/api/register",
+        "https://51b1b8bea150.ngrok-free.app/api/register",
         {
           method: "POST",
           headers: {

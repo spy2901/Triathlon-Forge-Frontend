@@ -25,7 +25,7 @@ export default function HomeScreen() {
     setLoading(true);
     try {
       const res = await fetch(
-        "https://15e8e85bd6ff.ngrok-free.app/api/strava/get_activities",
+        "https://51b1b8bea150.ngrok-free.app/api/strava/get_activities",
         {
           method: "POST",
           headers: {
@@ -39,6 +39,7 @@ export default function HomeScreen() {
         }
       );
       const data = await res.json();
+      console.log("Fetched activities:", data);
       if (data.success) {
         setActivities((prev) => [...prev, ...data.data]);
         setOffset((prev) => prev + data.limit);

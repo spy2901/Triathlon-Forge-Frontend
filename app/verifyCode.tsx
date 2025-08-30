@@ -24,7 +24,7 @@ export default function VerificationScreen() {
 
     try {
       const response = await fetch(
-        "https://15e8e85bd6ff.ngrok-free.app/api/verify",
+        "https://51b1b8bea150.ngrok-free.app/api/verify",
         {
           method: "POST",
           headers: {

@@ -104,7 +104,7 @@ export default function TabLayout() {
             ),
           }}
         />
-        {/* Define tab for settings Screen that is not vissible */}
+        {/* Define tab for Screens that are not vissible */}
         <Tabs.Screen
           name="Settings"
           options={{
@@ -112,6 +112,18 @@ export default function TabLayout() {
             href: null,
             tabBarStyle: { display: "none" },
             title: "Settings",
+            tabBarIcon: ({ color }) => (
+              <Ionicons size={28} name="settings-sharp" color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="activity"
+          options={{
+            headerShadowVisible: false,
+            href: null,
+            tabBarStyle: { display: "none" },
+            title: "Activity",
             tabBarIcon: ({ color }) => (
               <Ionicons size={28} name="settings-sharp" color={color} />
             ),
